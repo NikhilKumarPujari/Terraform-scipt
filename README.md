@@ -4,7 +4,14 @@ This project provisions AWS resources (EC2, S3, VPC) using **Terraform**.
 It supports **multiple environments** (`dev`, `stage`, `prod`) with separate variable files.
 
 ```bash
-$ mvn spring-boot:run
+examples to run only     
+ec2 ->  ./deploy.sh dev ec2 apply/destroy
+vpc ->   ./deploy.sh dev vpc apply/
+
+for resources to run ->  ./deploy.sh dev all
+for destroy all ->  ./deploy.sh prod all destroy
+
+
 
 ## 📂 Project Structure
 ---
