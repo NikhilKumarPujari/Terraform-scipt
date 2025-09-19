@@ -1,10 +1,8 @@
-resource "aws_s3_bucket" "app_bucket" {
-  count  = var.enable_s3 ? 1 : 0
-  bucket = "${var.env}-app-bucket-123456"
-  acl    = "private"
+resource "aws_s3_bucket" "bucket" {
+  count = var.enable_s3 ? 1 : 0
+  bucket = "${var.env}-${var.bucket_name}"
 
   tags = {
     Name = "${var.env}-bucket"
-    Env  = var.env
   }
 }
