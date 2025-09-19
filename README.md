@@ -30,5 +30,12 @@ key_name      = "dev-key"
 vpc_cidr      = "10.0.0.0/16"
 enable_s3     = true
 
+terraform init
+terraform plan -var-file="dev.tfvars"
+terraform apply -var-file="dev.tfvars" -auto-approve
+terraform destroy -var-file="dev.tfvars" -auto-approve
+
+
+
 
 ```
